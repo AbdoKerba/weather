@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>Weather Detector</nav>
+    <form action="" method="post">
+      {% csrf_token %}
+      <input type="search" name="city" class="search" />
+      <input type="submit" value="Search" class="submit" />
+    </form>
+    <div class="content">
+      <h1>Country</h1>
+      <h1>{{country}}</h1>
+      <h1>City</h1>
+      <h1>{{city}}</h1>
+      <h1>Temperature</h1>
+      <h1>{{temp}}°C</h1>
+      <h1>Status</h1>
+      <h1>{{description}}</h1>
+      <h1>Pressure</h1>
+      <h1>{{pressure}}</h1>
+      <h1>Wind</h1>
+      <h1>{{wind}}</h1>
+    </div>
+  </body>
+</html>
