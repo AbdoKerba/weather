@@ -15,7 +15,7 @@ def index(request):
             'temp': round(json_data['main']['temp'] - 272.15),
             'description': json_data['weather'][0]['description'],
             'pressure': json_data['main']['pressure'],
-            'wind': json_data['wind']['speed'],
+            'wind': json_data['cod'],
             'city': city
         }
     else:
