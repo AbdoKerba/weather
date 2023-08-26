@@ -11,7 +11,12 @@
     <nav>Weather Detector</nav>
     <form action="" method="post">
       {% csrf_token %}
-      <input type="search" name="city" class="search" />
+      <input
+        type="search"
+        name="city"
+        class="search"
+        placeholder="Enter City"
+      />
       <input type="submit" value="Search" class="submit" />
     </form>
     <div class="content">
