@@ -9,8 +9,6 @@ def index(request):
         try:
             req = urllib.request.urlopen("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=594708214e839c9292443ce74ab32272").read()
             json_data = json.loads(req)
-            if json_data['cod'] == 404:
-                return HttpResponse("Invalid city")
             data = {
                 'country': json_data['sys']['country'],
                 'temp': round(json_data['main']['temp'] - 272.15),
